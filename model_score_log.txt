@@ -1,0 +1,63 @@
+# Model Score Log:
+
+---------------------------------------------------------------
+
+{'clf__selected_model': ('sgd',
+  {'alpha': 0.1, 'l1_ratio': 0.75, 'loss': 'hinge', 'n_iter': 800}),
+ 'vect__selected_model': ('snowball_stemmer',
+  {'lowercase': True, 'ngram_range': (1, 2), 'stop_words': None})}
+
+precision    recall  f1-score   support
+
+FAKE       0.87      0.95      0.91       383
+REAL       0.95      0.87      0.91       417
+
+avg / total       0.91      0.91      0.91       800
+
+---------------------------------------------------------------
+
+{'clf__selected_model': ('multi_nb', {'alpha': 0.25}),
+ 'vect__selected_model': ('counter',
+  {'lowercase': True, 'ngram_range': (1, 3), 'stop_words': None})}
+
+precision    recall  f1-score   support
+
+FAKE       0.96      0.89      0.92       383
+REAL       0.90      0.96      0.93       417
+
+avg / total       0.93      0.93      0.93       800
+
+---------------------------------------------------------------
+{'clf__selected_model': ('svm-ker', {'C': 10000.0, 'kernel': 'rbf'}),
+ 'vect__selected_model': ('porter_stemmer',
+  {'lowercase': True, 'ngram_range': (1, 4), 'stop_words': None})}
+
+
+precision    recall  f1-score   support
+
+FAKE       0.86      0.94      0.90       383
+REAL       0.94      0.86      0.90       417
+
+avg / total     0.90      0.90      0.90       800
+
+
+---------------------------------------------------------------
+[CV]  vect__selected_model=('porter_stemmer', {'ngram_range': (1, 4),
+'stop_words': None, 'lowercase': False}), clf__selected_model=('svm-ker',
+ {'kernel': 'rbf', 'C': 1000.0}), score=0.8697282099343955, total=12.1min
+
+[CV]  vect__selected_model=('counter', {'ngram_range': (1, 3),
+'stop_words': None, 'lowercase': False}), clf__selected_model=('svm-ker',
+ {'kernel': 'rbf', 'C': 1000.0}), score=0.8678537956888472, total= 1.3min
+
+[CV]  vect__selected_model=('counter', {'ngram_range': (1, 3),
+ 'stop_words': None, 'lowercase': False}), clf__selected_model=('svm-ker',
+  {'kernel': 'rbf', 'C': 1000.0}), score=0.8818011257035647, total= 1.3min
+
+[CV]  vect__selected_model=('porter_stemmer', {'ngram_range': (1, 4),
+ 'stop_words': None, 'lowercase': True}), clf__selected_model=('svm-ker',
+  {'kernel': 'rbf', 'C': 10000.0}), score=0.8903467666354264, total=12.4min
+
+[CV]  vect__selected_model=('porter_stemmer', {'ngram_range': (1, 4),
+'stop_words': None, 'lowercase': True}), clf__selected_model=('svm-ker',
+{'kernel': 'rbf', 'C': 10000.0}), score=0.8958724202626641, total=12.4min
