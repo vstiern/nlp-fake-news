@@ -42,21 +42,20 @@ avg / total     0.90      0.90      0.90       800
 
 
 ---------------------------------------------------------------
-[CV]  vect__selected_model=('porter_stemmer', {'ngram_range': (1, 4),
-'stop_words': None, 'lowercase': False}), clf__selected_model=('svm-ker',
- {'kernel': 'rbf', 'C': 1000.0}), score=0.8697282099343955, total=12.1min
+# SGD / multi_nb randomsearchgrid with tf-idf (cv=3, n-iter=20)
 
-[CV]  vect__selected_model=('counter', {'ngram_range': (1, 3),
-'stop_words': None, 'lowercase': False}), clf__selected_model=('svm-ker',
- {'kernel': 'rbf', 'C': 1000.0}), score=0.8678537956888472, total= 1.3min
+[CV]  vect__selected_model=('porter_stemmer', {'ngram_range': (1, 4),
+ 'stop_words': None, 'lowercase': True}), tf-idf__use_idf=False,
+ clf__selected_model=('sgd', {'alpha': 0.0001, 'loss': 'hinge',
+  'l1_ratio': 0.75}), score=0.9090056285178236, total=11.9min
+
+
+---------------------------------------------------------------
+# svm-kernel without tf-idf (cv=3, n-iter=20)
 
 [CV]  vect__selected_model=('counter', {'ngram_range': (1, 3),
  'stop_words': None, 'lowercase': False}), clf__selected_model=('svm-ker',
   {'kernel': 'rbf', 'C': 1000.0}), score=0.8818011257035647, total= 1.3min
-
-[CV]  vect__selected_model=('porter_stemmer', {'ngram_range': (1, 4),
- 'stop_words': None, 'lowercase': True}), clf__selected_model=('svm-ker',
-  {'kernel': 'rbf', 'C': 10000.0}), score=0.8903467666354264, total=12.4min
 
 [CV]  vect__selected_model=('porter_stemmer', {'ngram_range': (1, 4),
 'stop_words': None, 'lowercase': True}), clf__selected_model=('svm-ker',
