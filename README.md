@@ -27,6 +27,7 @@ Classification problem of News Report (document) for classes (FAKE, REAL). Try t
     - Navie Bayes
     - MaxEnt (not working -> config issues -> unresolved)
     - SVM
+
 **Section 2:**
 1. POS Tagging
 2. POS Model
@@ -36,10 +37,12 @@ Classification problem of News Report (document) for classes (FAKE, REAL). Try t
 2. Model Optimization
 
 **Section 4:**
+Please note this section uses gloVe6b.50.txt file for embedding. Please download: https://nlp.stanford.edu/projects/glove/
 1. Kears Models
     - Seqential NN
     - CNN
     - LTSM w. Embeddning
+
 
 **Section 5:**
 1. Ensamble
